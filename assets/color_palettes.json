@@ -1,0 +1,90 @@
+{
+  "nature": {
+    "name": "Nature风格",
+    "description": "低饱和度颜色，适合Nature期刊",
+    "colors": [
+      "#2E86AB",
+      "#A23B72",
+      "#F18F01",
+      "#C73E1D",
+      "#3B1F2B"
+    ]
+  },
+  "nmi": {
+    "name": "NMI风格",
+    "description": "柔和色调，适合Nature Machine Intelligence",
+    "colors": [
+      "#5B8DB8",
+      "#8FBCDA",
+      "#B5D8EB",
+      "#D4E6F1",
+      "#E8F4F8"
+    ]
+  },
+  "science": {
+    "name": "Science风格",
+    "description": "鲜明对比，适合Science期刊",
+    "colors": [
+      "#1B9E77",
+      "#D95F02",
+      "#7570B3",
+      "#E7298A",
+      "#66A61E"
+    ]
+  },
+  "cell": {
+    "name": "Cell风格",
+    "description": "专业配色，适合Cell期刊",
+    "colors": [
+      "#4E79A7",
+      "#F28E2B",
+      "#E15759",
+      "#76B7B2",
+      "#59A14F"
+    ]
+  },
+  "monochrome": {
+    "name": "单色方案",
+    "description": "灰度系列，适合黑白打印",
+    "colors": [
+      "#2C3E50",
+      "#34495E",
+      "#7F8C8D",
+      "#95A5A6",
+      "#BDC3C7"
+    ]
+  },
+  "pastel": {
+    "name": "柔和色",
+    "description": "低饱和度柔和色",
+    "colors": [
+      "#B5D8EB",
+      "#E8B4CB",
+      "#FFD4A3",
+      "#F5B7B1",
+      "#D5C4A1"
+    ]
+  },
+  "vibrant": {
+    "name": "活力色",
+    "description": "高饱和度鲜艳色",
+    "colors": [
+      "#0077BB",
+      "#EE7733",
+      "#009988",
+      "#CC3311",
+      "#33BBEE"
+    ]
+  },
+  "colorblind_safe": {
+    "name": "色盲友好",
+    "description": "对色盲友好的配色方案",
+    "colors": [
+      "#0072B2",
+      "#D55E00",
+      "#009E73",
+      "#CC79A7",
+      "#F0E442"
+    ]
+  }
+}
