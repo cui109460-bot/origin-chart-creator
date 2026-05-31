@@ -9,14 +9,15 @@ import os
 import pandas as pd
 import numpy as np
 
-# 添加项目根目录到Python路径
-# 脚本位于 skills/origin-chart-creator/scripts/，需要向上3级到达项目根目录
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-SKILL_DIR = os.path.dirname(SCRIPT_DIR)
-SKILLS_DIR = os.path.dirname(SKILL_DIR)
-PROJECT_ROOT = os.path.dirname(SKILLS_DIR)
+# 向上搜索 origin_graph_library.py 所在目录作为项目根目录
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = _SCRIPT_DIR
+for _ in range(5):
+    if os.path.exists(os.path.join(_PROJECT_ROOT, 'origin_graph_library.py')):
+        break
+    _PROJECT_ROOT = os.path.dirname(_PROJECT_ROOT)
 
-sys.path.insert(0, PROJECT_ROOT)
+sys.path.insert(0, _PROJECT_ROOT)
 
 from data_processing import (
     load_csv,

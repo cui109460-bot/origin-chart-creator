@@ -9,10 +9,18 @@ import os
 import pandas as pd
 import numpy as np
 
-# 添加项目根目录到Python路径
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+# 向上搜索 origin_graph_library.py 所在目录作为项目根目录
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = _SCRIPT_DIR
+for _ in range(5):
+    if os.path.exists(os.path.join(_PROJECT_ROOT, 'origin_graph_library.py')):
+        break
+    _PROJECT_ROOT = os.path.dirname(_PROJECT_ROOT)
+
+sys.path.insert(0, _PROJECT_ROOT)
 
 import origin_graph_library as ogl
+from style_templates import NATURE_COLORS, get_color_palette, apply_nature_style
 
 
 class ChartCreator:
@@ -198,6 +206,28 @@ class ChartCreator:
             raise ValueError("请先创建图表")
         
         ogl.add_legend(self.current_chart)
+        return self.current_chart
+    
+    def apply_theme(self, theme_name='nature'):
+        """
+        应用预设主题样式
+        
+        参数:
+            theme_name: 主题名称 ('nature', 'science', 'nmi', 'pastel', 'monochrome')
+        """
+        if self.current_chart is None:
+            raise ValueError("请先创建图表")
+        
+        colors = get_color_palette(theme_name)
+        style = apply_nature_style()
+        
+        # 应用颜色到图表
+        for i, color in enumerate(colors):
+            try:
+                ogl.set_plot_color(self.current_chart, plot_idx=i, color=color)
+            except (IndexError, Exception):
+                break
+        
         return self.current_chart
     
     def save_chart(self, filepath, dpi=300):

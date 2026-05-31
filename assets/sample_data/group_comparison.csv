@@ -1,0 +1,11 @@
+subject,group,before,after
+1,Control,45.2,46.1
+2,Control,48.7,47.9
+3,Control,42.3,43.5
+4,Control,50.1,49.8
+5,Control,44.6,45.2
+6,Treatment,43.8,52.1
+7,Treatment,47.2,58.3
+8,Treatment,46.5,55.7
+9,Treatment,49.1,61.2
+10,Treatment,44.9,54.8
